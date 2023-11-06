@@ -221,6 +221,7 @@
                           <feature>scv-jceks-impl</feature>
                           <feature>scv-shell</feature>
                           <feature>snakeyaml</feature>
+                          <feature>spring-security-opennms</feature>
                           <feature>ssh</feature>
                           <feature>zookeeper-dependencies</feature>
 
