@@ -351,9 +351,14 @@
                       <skip>${verify.skipSentinel}</skip>
                       <features>
                           <feature>sentinel-api-layer</feature>
+                          <feature>sentinel-distpoller-dao</feature>
                           <feature>sentinel-events-forwarder</feature>
+                          <feature>sentinel-flows</feature>
                           <feature>sentinel-jms</feature>
+                          <feature>sentinel-kafka</feature>
                           <feature>sentinel-newts</feature>
+                          <feature>sentinel-persistence</feature>
+                          <feature>sentinel-telemetry</feature>
                           <feature>sentinel-timeseries-api</feature>
                       </features>
                   </configuration>
