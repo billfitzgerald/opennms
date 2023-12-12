@@ -202,8 +202,8 @@
         <bundle>wrap:mvn:com.swrve/rate-limited-logger/${rateLimitedLoggerVersion}$Bundle-SymbolicName=com.swrve.rate-limited-logger&amp;Bundle-Version=${rateLimitedLoggerVersion}</bundle>
     </feature>
     <feature name="spring-security-opennms" version="${springSecurityVersion}" description="Spring :: Security">
+        <feature prerequisite="true">commons-codec</feature>
         <feature version="[4.2,4.3)">spring-web</feature>
-        <feature>commons-codec</feature>
         <feature>javax.servlet</feature>
         <bundle>wrap:mvn:org.springframework.ldap/spring-ldap-core/${springLdapVersion}$Bundle-SymbolicName=org.springframework.ldap.core&amp;Bundle-Version=${springLdapVersion}&amp;Export-Package=org.springframework.ldap*;version="${springLdapVersion}"</bundle>
         <bundle>wrap:mvn:org.springframework.security/spring-security-aspects/${springSecurityVersion}$Bundle-SymbolicName=org.springframework.security.aspects&amp;Bundle-Version=${springSecurityVersion}</bundle>
@@ -280,7 +280,8 @@
     </feature>
 
     <feature name="opennms-core" version="${project.version}" description="OpenNMS :: Core">
-        <feature>commons-io</feature>
+        <feature prerequisite="true">commons-codec</feature>
+        <feature prerequisite="true">commons-io</feature>
         <feature>dnsjava</feature>
         <feature>jackson1</feature>
         <feature>jaxb</feature>
@@ -414,9 +415,9 @@
         <bundle>mvn:org.opennms/opennms-config-jaxb/${project.version}</bundle>
     </feature>
     <feature name="opennms-config" version="${project.version}" description="OpenNMS :: Configuration">
+        <feature prerequisite="true">commons-codec</feature>
         <feature>c3p0</feature>
         <feature>hikari-cp</feature>
-        <feature>commons-codec</feature>
         <feature>opennms-config-api</feature>
         <feature>opennms-core-db</feature>
         <feature>opennms-poller-api</feature>
@@ -1547,7 +1548,7 @@
     </feature>
     <feature name="opennms-jest" version="${project.version}" description="OpenNMS :: Features :: Jest :: Feature definition">
         <details>Feature definition for Jest (ElasticSearch Java ReST Client)</details>
-        <feature>commons-codec</feature>
+        <feature prerequisite="true">commons-codec</feature>
         <feature>guava</feature>
         <feature>resilience4j</feature>
         <feature>opennms-events-api</feature>
